@@ -47,19 +47,19 @@ allAnchor.forEach(link => link.classList.add("italic"))
 const firstAnchor = document.querySelector("a");
 firstAnchor.textContent = "Services"
 
-const secondAnchor = document.querySelector("a:nth-of-type(2)");
+const secondAnchor = firstAnchor.nextSibling
 secondAnchor.textContent = "Product"
 
-const thirdAnchor = document.querySelector("a:nth-of-type(3)");
+const thirdAnchor = secondAnchor.nextSibling
 thirdAnchor.textContent = "Vision"
 
-const fourthAnchor = document.querySelector("a:nth-of-type(4)");
+const fourthAnchor = thirdAnchor.nextSibling
 fourthAnchor.textContent = "Features"
 
-const fifthAnchor = document.querySelector("a:nth-of-type(5)");
+const fifthAnchor = fourthAnchor.nextSibling
 fifthAnchor.textContent = "About"
 
-const sixthAnchor = document.querySelector("a:nth-of-type(6)");
+const sixthAnchor = fifthAnchor.nextSibling
 sixthAnchor.textContent = "Contact"
 
 const firstImg = document.querySelector("header img");
@@ -109,11 +109,11 @@ fiveTextp.textContent = "Vision content elementum magna eros, ac posuere elvit t
  mainContentImg.src = "http://localhost:9000/img/accent.png"
 
  const contactHeader = document.querySelector(".contact h4")
-contactHeader.textContent = "Contact"
+contactHeader.h4 = "Contact"
 
 const contactParOne = document.querySelector(".contact p")
-const contactParTwo = document.querySelector(".contact p:nth-of-type(2)");
-const contactParThree = document.querySelector(".contact p:nth-of-type(3)");
+const contactParTwo = contactParOne.nextSibling;
+const contactParThree = contactParTwo.nextSibling;
 
 contactParOne.textContent = "123 Way 456 Street Somewhere, USA"
 contactParTwo.textContent = "1 (888) 888-8888"

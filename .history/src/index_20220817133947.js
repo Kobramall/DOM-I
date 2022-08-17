@@ -47,19 +47,19 @@ allAnchor.forEach(link => link.classList.add("italic"))
 const firstAnchor = document.querySelector("a");
 firstAnchor.textContent = "Services"
 
-const secondAnchor = document.querySelector("a:nth-of-type(2)");
+const secondAnchor = firstAnchor.nextSibling
 secondAnchor.textContent = "Product"
 
-const thirdAnchor = document.querySelector("a:nth-of-type(3)");
+const thirdAnchor = secondAnchor.nextSibling
 thirdAnchor.textContent = "Vision"
 
-const fourthAnchor = document.querySelector("a:nth-of-type(4)");
+const fourthAnchor = thirdAnchor.nextSibling
 fourthAnchor.textContent = "Features"
 
-const fifthAnchor = document.querySelector("a:nth-of-type(5)");
+const fifthAnchor = fourthAnchor.nextSibling
 fifthAnchor.textContent = "About"
 
-const sixthAnchor = document.querySelector("a:nth-of-type(6)");
+const sixthAnchor = fifthAnchor.nextSibling
 sixthAnchor.textContent = "Contact"
 
 const firstImg = document.querySelector("header img");
@@ -75,22 +75,28 @@ ctaButton.textContent = "Get Started"
 const ctaImg = document.querySelector(".cta img");
 ctaImg.src = "http://localhost:9000/img/cta.png"
 
-const oneText = document.querySelector(".text-content:nth-of-type(1) h4");
-const oneTextp = document.querySelector(".text-content:nth-of-type(1) p");
+const oneTextA = document.querySelector(".text-content:nth-of-type(1) h4");
+const twoTextA = document.querySelector(".text-content:nth-of-type(2)");
+const threeTextA = document.querySelector(".bottom-content .text-content:nth-of-type(1)");
+const fourTextA = document.querySelector(".bottom-content .text-content:nth-of-type(2)");
+const fiveTextA = document.querySelector(".bottom-content .text-content:nth-of-type(3)");
 
-const twoText = document.querySelector(".text-content:nth-of-type(2) h4");
-const twoTextp = document.querySelector(".text-content:nth-of-type(2) p");
+const oneText = oneTextA.h4
+const oneTextp = oneTextA.p
 
-const threeText = document.querySelector(".bottom-content .text-content:nth-of-type(1) h4");
-const threeTextp = document.querySelector(".bottom-content .text-content:nth-of-type(1) p");
+const twoText = twoTextA.h4
+const twoTextp = twoTextA.p
 
-const fourText = document.querySelector(".bottom-content .text-content:nth-of-type(2) h4");
-const fourTextp = document.querySelector(".bottom-content .text-content:nth-of-type(2) p");
+const threeText = threeTextA.h4
+const threeTextp = threeTextA.p
 
-const fiveText = document.querySelector(".bottom-content .text-content:nth-of-type(3) h4");
-const fiveTextp = document.querySelector(".bottom-content .text-content:nth-of-type(3) p");
+const fourText = fourTextA.h4
+const fourTextp = fourTextA.p
 
-oneText.textContent = "Features"
+const fiveText = fiveTextA.h4
+const fiveTextp = fiveTextA.p
+
+oneTextA.textContent = "Features"
 oneTextp.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio,in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
 
 twoText.textContent = "About"
@@ -109,17 +115,16 @@ fiveTextp.textContent = "Vision content elementum magna eros, ac posuere elvit t
  mainContentImg.src = "http://localhost:9000/img/accent.png"
 
  const contactHeader = document.querySelector(".contact h4")
-contactHeader.textContent = "Contact"
+contactHeader.h4 = "Contact"
 
 const contactParOne = document.querySelector(".contact p")
-const contactParTwo = document.querySelector(".contact p:nth-of-type(2)");
-const contactParThree = document.querySelector(".contact p:nth-of-type(3)");
+const contactParTwo = contactParOne.nextSibling;
+const contactParThree = contactParTwo.nextSibling;
 
-contactParOne.textContent = "123 Way 456 Street Somewhere, USA"
-contactParTwo.textContent = "1 (888) 888-8888"
-contactParThree.textContent = "sales@greatidea.io"
+contactParOne.p = "123 Way 456 Street Somewhere, USA"
+contactParTwo.p = "1 (888) 888-8888"
+contactParThree.p = "sales@greatidea.io"
 
 const footerAnchor = document.querySelector("footer a")
 
 footerAnchor.textContent = "Copyright Great Idea! 2021" 
-footerAnchor.classList.add("bold")
